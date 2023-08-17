@@ -1,12 +1,8 @@
-import { useState } from "react";
-
-const BurgerButton = () => {
-    const [menuOpen, setMenuOpen] = useState(false);
-    const toggle = () => setMenuOpen((prev) => !prev);
+const BurgerButton = ({ isMenuOpen, toggleMenu }) => {
     return (
         <div
-            className={"burger-button " + (menuOpen ? "active" : "")}
-            onClick={toggle}
+            className={"burger-button " + (isMenuOpen ? "active" : "")}
+            onClick={toggleMenu}
         >
             <span />
             <span />
