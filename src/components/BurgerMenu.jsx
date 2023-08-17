@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import { BurgerContext } from "../context/BurgerState";
 
-const BurgerMenu = ({ children, isMenuOpen }) => {
+const BurgerMenu = ({ children }) => {
+    const { isMenuOpen } = useContext(BurgerContext);
+
     return (
         <div className={"burger-content " + (isMenuOpen ? "active" : "")}>
             {children}
